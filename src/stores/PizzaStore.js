@@ -19,17 +19,8 @@ var PizzaActions = require('../actions/PizzaActions');
 var _ = require('lodash');
 
 var CHANGE_EVENT = 'change';
-//var baseUrl = 'http://54.213.141.57/'
-var baseUrl = 'http://localhost:3000/';
+var baseUrl = 'http://54.213.141.57/'
 
-/**
-* _pizzas = {
-*    id:
-*    name:
-*    descriptioni:
-*    toppings: [topping_ids]
-  }
-*/
 var _pizzas = [];
 var _toppings = [];
 
