@@ -19,7 +19,8 @@ var PizzaActions = require('../actions/PizzaActions');
 var _ = require('lodash');
 
 var CHANGE_EVENT = 'change';
-var baseUrl = 'http://54.213.141.57/'
+//var baseUrl = 'http://54.213.141.57/'
+var baseUrl = 'http://localhost:3000/';
 
 /**
 * _pizzas = {
@@ -44,7 +45,7 @@ function createPizza(pizzaName, pizzaDescription) {
     }
   };
 
-  $.post(baseUrl + 'pizzas', data, function(data) { _pizzas.push(data); PizzaStore.emitChange(); });
+  $.post(baseUrl + 'pizzas', data, function(data) { data.toppings = [];_pizzas.push(data); PizzaStore.emitChange(); });
 }
 
 function createTopping(toppingName) {
@@ -88,6 +89,7 @@ function addTopping(pizzaId, toppingId) {
   $.post(baseUrl + '/pizzas/' + pizzaId + '/toppings', data, function(data) {
      var name = _.find(_toppings, ['id', toppingId]).name;
      data.object['name'] = name;
+     console.log(_pizzas);
      _.find(_pizzas, ['id', pizzaId]).toppings.push(data.object)
       PizzaStore.emitChange();
     });

@@ -58,9 +58,11 @@ export default class ToppingEdit extends React.Component {
 	getPizzaToppings() {
 		var toppingIds = [];
 		var pizza = _.find(this.state.allPizzas, ['id', this.getPizzaId()]);
-		pizza.toppings.forEach(function(topping) {
-			toppingIds.push(topping.topping_id);
-		});
+		if (pizza.toppings) {
+			pizza.toppings.forEach(function(topping) {
+				toppingIds.push(topping.topping_id);
+			});
+		}
 
 		return toppingIds;
 	}
