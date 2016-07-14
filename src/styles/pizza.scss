@@ -1,0 +1,50 @@
+* {margin: 0; padding: 0;}
+
+.topping {
+  width: 100%;
+  background-color: rgb(94, 96, 99);
+  color: rgb(255, 255, 255);
+  height: 30px;
+  padding-left: 20px;
+  padding-top: 15px;
+  border-bottom: solid 1px rgb(73, 73 ,73);
+}
+
+.topping:hover {
+  background-color: rgb(73, 73, 73);
+}
+
+.pizza {
+  width: 100%;
+  background-color: rgb(114, 116, 119);
+  color: rgb(255, 255, 255);
+  height: 40px;
+  padding-left: 10px;
+  padding-top: 20px;
+  border-bottom: solid 1px rgb(73, 73, 73);
+    text-shadow: -1px 1px #222222;
+
+}
+
+.pizza:hover {
+  background-color: rgb(73, 73, 73);
+}
+
+button {
+  color: #fff;
+  background-color: rgb(100, 100, 100);
+  text-shadow: -1px 1px #222222;
+  border: 1px solid black;
+  padding: 5px 10px;
+
+}
+
+button:hover {
+  background-color: rgb(150,150,150);
+  text-shadow: -1px 1px #27496d;
+}
+
+button:active {
+  background-color: rgb(50, 50, 50);
+  text-shadow: -1px 1px #193047;
+}
