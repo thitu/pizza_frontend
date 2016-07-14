@@ -46,7 +46,7 @@ function createTopping(toppingName) {
     }
   };
 
-  $.post(baseurl + 'toppings', data, function(data) { _toppings.push(data); PizzaStore.emitChange(); });
+  $.post(baseUrl + 'toppings', data, function(data) { _toppings.push(data); PizzaStore.emitChange(); });
 
 }
 
