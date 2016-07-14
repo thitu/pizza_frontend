@@ -80,7 +80,6 @@ function addTopping(pizzaId, toppingId) {
   $.post(baseUrl + '/pizzas/' + pizzaId + '/toppings', data, function(data) {
      var name = _.find(_toppings, ['id', toppingId]).name;
      data.object['name'] = name;
-     console.log(_pizzas);
      _.find(_pizzas, ['id', pizzaId]).toppings.push(data.object)
       PizzaStore.emitChange();
     });
